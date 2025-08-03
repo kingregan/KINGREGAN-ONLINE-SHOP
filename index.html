@@ -16,7 +16,7 @@
 <body class="bg-[#8B4513] text-white">
 
   <!-- Notification Bar -->
-  <div class="bg-gradient-to-r from-yellow-400 via-black to-purple-700 text-white text-center py-2 font-bold">
+  <div class="bg-gradient-to-r from-black via-purple-700 to-black text-white text-center py-2 font-bold">
     Karibu kwenye KINGREGAN ONLINE SHOPPING | Nguo za Kisasa kwa Bei Nafuu – Oda Sasa!
   </div>
 
@@ -28,10 +28,10 @@
 
   <!-- Gallery (Drive Link only) -->
   <section class="p-6 text-center">
-    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Bidhaa Zetu</h2>
+    <h2 class="text-2xl font-bold text-white mb-4">Bidhaa Zetu</h2>
     <a href="https://drive.google.com/drive/folders/1bqbYgst7Wz-nzlJFPwZTefgCA0dcy51g" 
        target="_blank" 
-       class="text-yellow-300 underline font-semibold text-lg">
+       class="underline font-semibold text-white text-lg">
        🔗 Bonyeza hapa kuona bidhaa
     </a>
   </section>
@@ -39,21 +39,14 @@
   <!-- Fomu ya Oda -->
   <section class="p-6 bg-white text-black">
     <h2 class="text-2xl font-bold mb-4 text-center">Fanya Oda Yako Hapa</h2>
-    <form class="space-y-4 max-w-xl mx-auto">
-      <input type="text" placeholder="Jina Kamili" class="w-full border p-2 rounded" />
-      <input type="text" placeholder="Aina ya Nguo (Mfano: Dera, Suruali, T-Shirt)" class="w-full border p-2 rounded" />
-      <input type="number" placeholder="Idadi" class="w-full border p-2 rounded" />
-      <textarea placeholder="Maelezo ya ziada (size, rangi, nk)" class="w-full border p-2 rounded"></textarea>
+    <form id="orderForm" class="space-y-4 max-w-xl mx-auto">
+      <input type="text" id="jina" placeholder="Jina Kamili" class="w-full border p-2 rounded" required />
+      <input type="text" id="bidhaa" placeholder="Aina ya Nguo (mfano: Dera, Suruali)" class="w-full border p-2 rounded" required />
+      <input type="number" id="idadi" placeholder="Idadi" class="w-full border p-2 rounded" required />
+      <textarea id="maelezo" placeholder="Maelezo ya ziada (size, rangi, nk)" class="w-full border p-2 rounded"></textarea>
+      <input type="text" id="muamala" placeholder="Ingiza Code ya Muamala" class="w-full border p-2 rounded" required />
 
-      <h3 class="text-lg font-semibold mt-6">Maelekezo ya Malipo kwa M-Pesa</h3>
-      <p class="text-sm mb-2">
-        Lipa kwa M-Pesa kupitia namba: <strong>+255 756 289 572</strong> <br />
-        Jina la Mpokeaji: <strong>Regan Frank</strong> <br />
-        Ujumbe: <em>Oda ya Nguo</em>
-      </p>
-      <input type="text" placeholder="Ingiza Jina la Mlipaji au Code ya Muamala" class="w-full border p-2 rounded" />
-
-      <button type="submit" class="bg-purple-800 text-white px-4 py-2 rounded">Tuma Oda</button>
+      <button type="submit" class="bg-purple-800 text-white px-4 py-2 rounded w-full">Tuma Oda kwa WhatsApp</button>
     </form>
   </section>
 
@@ -64,7 +57,7 @@
     </h2>
     <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-md mx-auto space-y-4">
       <input type="email" name="email" required placeholder="Weka Email Yako" class="w-full border p-2 rounded" />
-      <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded">
+      <button type="submit" class="bg-purple-800 text-white px-4 py-2 rounded w-full">
         Jisajili Sasa
       </button>
     </form>
@@ -82,11 +75,28 @@
   <footer class="bg-black text-white p-6 text-center space-y-2">
     <p>Tembelea kurasa zetu za mitandao ya kijamii:</p>
     <div class="flex justify-center gap-4">
-      <a href="https://www.facebook.com/share/1AvE8WnSjB/" target="_blank" class="underline text-yellow-300">Facebook</a>
-      <a href="https://wa.me/255756289572" target="_blank" class="underline text-green-400">WhatsApp</a>
+      <a href="https://www.facebook.com/share/1AvE8WnSjB/" target="_blank" class="underline text-white">Facebook</a>
+      <a href="https://wa.me/255756289572" target="_blank" class="underline text-white">WhatsApp</a>
     </div>
     <p class="text-sm mt-4">&copy; 2025 KINGREGAN ONLINE SHOPPING. All rights reserved.</p>
   </footer>
+
+  <!-- WhatsApp Script -->
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const jina = document.getElementById("jina").value;
+      const bidhaa = document.getElementById("bidhaa").value;
+      const idadi = document.getElementById("idadi").value;
+      const maelezo = document.getElementById("maelezo").value;
+      const muamala = document.getElementById("muamala").value;
+
+      const message = `Habari, ningependa kuagiza nguo kutoka KINGREGAN ONLINE SHOPPING:%0A🧍 Jina: ${jina}%0A👕 Bidhaa: ${bidhaa}%0A📦 Idadi: ${idadi}%0A📝 Maelezo: ${maelezo}%0A💳 Code ya Muamala: ${muamala}`;
+
+      window.open(`https://wa.me/255756289572?text=${message}`, "_blank");
+    });
+  </script>
 
 </body>
 </html>
