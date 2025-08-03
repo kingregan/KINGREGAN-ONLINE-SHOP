@@ -1,4 +1,3 @@
-# KINGREGAN-ONLINE-SHOP
 <!DOCTYPE html>
 <html lang="sw">
 <head>
@@ -6,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KINGREGAN ONLINE SHOPPING</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <style>
+    .roboto-thin {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+    }
+  </style>
 </head>
-<body class="bg-purple-50 text-gray-800">
+<body class="bg-[#8B4513] text-white">
 
   <!-- Notification Bar -->
   <div class="bg-gradient-to-r from-yellow-400 via-black to-purple-700 text-white text-center py-2 font-bold">
@@ -15,78 +21,49 @@
   </div>
 
   <!-- Header -->
-  <header class="bg-purple-800 text-white p-6 text-center">
-    <h1 class="text-3xl font-bold" style="color: #FFD700;">KINGREGAN ONLINE SHOPPING</h1>
-    <p class="text-lg">Nguo za kisasa kwa bei nafuu – Wasiliana nasi moja kwa moja!</p>
+  <header class="bg-purple-100 p-6 text-center">
+    <h1 class="text-3xl roboto-thin" style="color: brown;">KINGREGAN ONLINE SHOPPING</h1>
+    <p class="text-lg roboto-thin" style="color: brown;">Nguo za kisasa kwa bei nafuu – Wasiliana nasi moja kwa moja!</p>
   </header>
 
-  <!-- Picha za Bidhaa -->
-  <section class="p-6">
-    <h2 class="text-2xl font-bold text-purple-800 mb-4">Bidhaa Zetu</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <img src="https://via.placeholder.com/300x400?text=Nguo+1" alt="Nguo 1" class="rounded-lg shadow-md" />
-      <img src="https://via.placeholder.com/300x400?text=Nguo+2" alt="Nguo 2" class="rounded-lg shadow-md" />
-      <img src="https://via.placeholder.com/300x400?text=Nguo+3" alt="Nguo 3" class="rounded-lg shadow-md" />
-    </div>
-    <div class="mt-4 text-center">
-      <a
-        href="https://drive.google.com/drive/folders/1bqbYgst7Wz-nzlJFPwZTefgCA0dcy51g"
-        target="_blank"
-        class="text-purple-800 underline font-semibold"
-        >Tazama Picha Zaidi kwenye Google Drive &rarr;</a
-      >
-    </div>
+  <!-- Gallery (Drive Link only) -->
+  <section class="p-6 text-center">
+    <h2 class="text-2xl font-bold text-yellow-300 mb-4">Bidhaa Zetu</h2>
+    <a href="https://drive.google.com/drive/folders/1bqbYgst7Wz-nzlJFPwZTefgCA0dcy51g" 
+       target="_blank" 
+       class="text-yellow-300 underline font-semibold text-lg">
+       🔗 Bonyeza hapa kuona bidhaa
+    </a>
   </section>
 
   <!-- Fomu ya Oda -->
-  <section class="p-6 bg-white">
-    <h2 class="text-2xl font-bold text-brown-800 mb-4">Fanya Oda Yako Hapa</h2>
+  <section class="p-6 bg-white text-black">
+    <h2 class="text-2xl font-bold mb-4 text-center">Fanya Oda Yako Hapa</h2>
     <form class="space-y-4 max-w-xl mx-auto">
       <input type="text" placeholder="Jina Kamili" class="w-full border p-2 rounded" />
-      <input
-        type="text"
-        placeholder="Aina ya Nguo (Mfano: Dera, Suruali, T-Shirt)"
-        class="w-full border p-2 rounded"
-      />
+      <input type="text" placeholder="Aina ya Nguo (Mfano: Dera, Suruali, T-Shirt)" class="w-full border p-2 rounded" />
       <input type="number" placeholder="Idadi" class="w-full border p-2 rounded" />
-      <textarea
-        placeholder="Maelezo ya ziada (size, rangi, nk)"
-        class="w-full border p-2 rounded"
-      ></textarea>
+      <textarea placeholder="Maelezo ya ziada (size, rangi, nk)" class="w-full border p-2 rounded"></textarea>
 
-      <h3 class="text-lg font-semibold text-purple-800 mt-6">Maelekezo ya Malipo kwa M-Pesa</h3>
-      <p class="text-sm text-gray-700 mb-2">
+      <h3 class="text-lg font-semibold mt-6">Maelekezo ya Malipo kwa M-Pesa</h3>
+      <p class="text-sm mb-2">
         Lipa kwa M-Pesa kupitia namba: <strong>+255 756 289 572</strong> <br />
         Jina la Mpokeaji: <strong>Regan Frank</strong> <br />
         Ujumbe: <em>Oda ya Nguo</em>
       </p>
-      <input
-        type="text"
-        placeholder="Ingiza Jina la Mlipaji au Code ya Muamala"
-        class="w-full border p-2 rounded"
-      />
+      <input type="text" placeholder="Ingiza Jina la Mlipaji au Code ya Muamala" class="w-full border p-2 rounded" />
 
       <button type="submit" class="bg-purple-800 text-white px-4 py-2 rounded">Tuma Oda</button>
     </form>
   </section>
 
   <!-- Fomu ya Kujisajili -->
-  <section class="p-6 bg-yellow-50">
+  <section class="p-6 bg-yellow-50 text-black">
     <h2 class="text-2xl font-bold text-purple-800 mb-4 text-center">
       Jisajili Kupokea Matangazo kwa Email
     </h2>
-    <form
-      action="https://formspree.io/f/yourformid"
-      method="POST"
-      class="max-w-md mx-auto space-y-4"
-    >
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="Weka Email Yako"
-        class="w-full border p-2 rounded"
-      />
+    <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-md mx-auto space-y-4">
+      <input type="email" name="email" required placeholder="Weka Email Yako" class="w-full border p-2 rounded" />
       <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded">
         Jisajili Sasa
       </button>
@@ -97,32 +74,19 @@
   </section>
 
   <!-- Free Delivery Notice -->
-  <section
-    class="bg-green-100 text-center py-4 text-green-800 font-semibold"
-  >
+  <section class="bg-green-100 text-center py-4 text-green-800 font-semibold">
     🚚 Tunatoa <strong>Delivery Bure</strong> kwa oda zote kuanzia TZS 50,000 ndani ya Kilimanjaro na Arusha!
   </section>
 
-  <!-- Mawasiliano -->
-  <footer
-    class="bg-brown-700 text-white p-6 text-center space-y-2"
-  >
+  <!-- Footer (Black) -->
+  <footer class="bg-black text-white p-6 text-center space-y-2">
     <p>Tembelea kurasa zetu za mitandao ya kijamii:</p>
     <div class="flex justify-center gap-4">
-      <a
-        href="https://www.facebook.com/share/1AvE8WnSjB/"
-        target="_blank"
-        class="underline text-yellow-300"
-        >Facebook</a
-      >
-      <a
-        href="https://wa.me/255756289572"
-        target="_blank"
-        class="underline text-green-400"
-        >WhatsApp</a
-      >
+      <a href="https://www.facebook.com/share/1AvE8WnSjB/" target="_blank" class="underline text-yellow-300">Facebook</a>
+      <a href="https://wa.me/255756289572" target="_blank" class="underline text-green-400">WhatsApp</a>
     </div>
     <p class="text-sm mt-4">&copy; 2025 KINGREGAN ONLINE SHOPPING. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
